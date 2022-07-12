@@ -1,0 +1,6 @@
+spacy>=3.0.0,<4.0.0
+https://github.com/explosion/spacy-models/releases/download/zh_core_web_trf-3.0.0/zh_core_web_trf-3.0.0.tar.gz#egg=zh_core_web_trf
+supar
+gensim
+pandas
+python-Levenshtein
