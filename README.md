@@ -4,6 +4,95 @@ ChiLingFeat is a Python research project for various Chinese handcrafted linguis
 
 For extracting features, the spacy is firstly utilized to tokenize the input passage/sentence (for sentence, the tokenized list contain one sentence). Then currently, the sentence-level features are parsed by StanfordCoreNLP, the passge-level features are obtained the same way as the LingFeat.
 
+# Installation
+
+1. Install the requirement packages
+```bash
+git clone https://github.com/ffliu6/ChiLingFeat.git
+pip install -r ChiLingFeat/requirements.txt
+```
+
+2. Spacy
+This library assumes that you have spaCy version 3.0+ installed.
+```bash
+python -m spacy download zh_core_web_trf
+```
+
+3. SuPar
+```bash
+pip install -U supar==1.0.0
+```
+# How to use
+
+```python
+"""
+Import
+
+this is the only import you need
+"""
+from lingfeat import extractor
+
+
+"""
+Pass text
+
+here, text must be in string type
+"""
+text = "..."
+LingFeat = extractor.pass_text(text)
+
+
+"""
+Preprocess text
+
+options (all boolean):
+- short (default False): include short words of < 3 letters
+- see_token (default False): return token list
+- see_sent_token (default False): return tokens in sentences
+
+output:
+- n_token
+- n_sent
+- token_list (optional)
+- sent_token_list (optional)
+"""
+LingFeat.preprocess()
+# or
+# print(LingFeat.preprocess())
+
+
+"""
+Extract features
+
+each method returns a dictionary of the corresponding features
+"""
+# Advanced Semantic (AdSem) Features
+WoKF = LingFeat.WoKF_() # Wikipedia Knowledge Features
+WBKF = LingFeat.WBKF_() # WeeBit Corpus Knowledge Features
+OSKF = LingFeat.OSKF_() # OneStopEng Corpus Knowledge Features
+
+# Discourse (Disco) Features
+EnDF = LingFeat.EnDF_() # Entity Density Features
+EnGF = LingFeat.EnGF_() # Entity Grid Features
+
+# Syntactic (Synta) Features
+PhrF = LingFeat.PhrF_() # Noun/Verb/Adj/Adv/... Phrasal Features
+TrSF = LingFeat.TrSF_() # (Parse) Tree Structural Features
+POSF = LingFeat.POSF_() # Noun/Verb/Adj/Adv/... Part-of-Speech Features
+
+# Lexico Semantic (LxSem) Features
+TTRF = LingFeat.TTRF_() # Type Token Ratio Features
+VarF = LingFeat.VarF_() # Noun/Verb/Adj/Adv Variation Features 
+PsyF = LingFeat.PsyF_() # Psycholinguistic Difficulty of Words (AoA Kuperman)
+WoLF = LingFeat.WorF_() # Word Familiarity from Frequency Count (SubtlexUS)
+
+# Shallow Traditional (ShTra) Features
+ShaF = LingFeat.ShaF_() # Shallow Features (e.g. avg number of tokens)
+TraF = LingFeat.TraF_() # Traditional Formulas 
+```
+
+# Feature List
+
 In total, we provided 240 Chinese features, X for sentence-level, and X for passage-level. As shown in the table below, the Fun column represents if the feature is for sentence or passage, in which *S* represents only for *sentence-level*, *P* represents only for *passage-level*, *S/P* represents for both *sentence-level* and *passage-level*. 
 
 | Index | Category | Sub-category | Description | Sung et al. 2015 | Lu et al. 2020 | Lee et al. 2021 | State | Fun | 
@@ -39,7 +128,7 @@ In total, we provided 240 Chinese features, X for sentence-level, and X for pass
 | 29 |  |  | Percentage of HSK4 to HSK5-words per sentence |  | 1 |  | B | S | 
 | 30 |  |  | Percentage of HSK6-words per sentence |  | 1 |  | B | S | 
 | 31 |  |  | Percentage of Not-HSK-words per sentence |  | 1 |  | B | S | 
-| 32 |  |  | total count of tokens x total count of sentence |  | 1 | A/B | S/P | 
+| 32 |  |  | total count of tokens x total count of sentence |  |   | 1 | A/B | S/P | 
 | 33 |  |  | sqrt(total count of tokens x total count of sentence) |  |  | 1 | A/B | S/P | 
 | 34 |  |  | log(total count of tokens)/log(total count of sentence) |  |  | 1 | A/B | S/P | 
 | 35 |  |  | average count of tokens per sentence | 1 |  | 1 | A/B | S/P | 
@@ -109,20 +198,20 @@ In total, we provided 240 Chinese features, X for sentence-level, and X for pass
 | 99 |  |  | average count of Function words per token |  |  | 1 | A | S/P | 
 | 100 |  |  | ratio of Content words to Function words |  |  | 1 | A | S/P | 
 | 101 |  |  | Logarithm of the average frequency of content words, according to Education Ministry word frequency list | 1 |  |  |  | *N | 
-| 102 |  |  | Percentage of unique adjectives per sentence |  | 1 |  | B | S | 
-| 103 |  |  | Number of unique adjectives per sentence |  | 1 |  | B | S | 
-| 104 |  |  | Percentage of unique functional words per sentence |  | 1 |  | B | S | 
-| 105 |  |  | Number of unique functional words per sentence |  | 1 |  | B | S | 
-| 106 |  |  | Number of unique verbs per sentence |  | 1 |  | B | S | 
-| 107 |  |  | Percentage of unique verbs per sentence |  | 1 |  | B | S | 
-| 108 |  |  | Number of unique nouns per sentence |  | 1 |  | B | S | 
-| 109 |  |  | Percentage of unique nouns per sentence |  | 1 |  | B | S | 
-| 110 |  |  | Number of unique All-Nouns per sentence |  | 1 |  | B | S | 
-| 111 |  |  | Percentage of unique All-Nouns per sentence |  | 1 |  | B | S | 
+| 102 |  |  | Percentage of unique adjectives per sentence |  | 1 |  | A/B | S | 
+| 103 |  |  | Number of unique adjectives per sentence |  | 1 |  | A/B | S | 
+| 104 |  |  | Percentage of unique functional words per sentence |  | 1 |  | A/B | S | 
+| 105 |  |  | Number of unique functional words per sentence |  | 1 |  | A/B | S | 
+| 106 |  |  | Number of unique verbs per sentence |  | 1 |  | A/B | S | 
+| 107 |  |  | Percentage of unique verbs per sentence |  | 1 |  | A/B | S | 
+| 108 |  |  | Number of unique nouns per sentence |  | 1 |  | A/B | S | 
+| 109 |  |  | Percentage of unique nouns per sentence |  | 1 |  | A/B | S | 
+| 110 |  |  | Number of unique All-Nouns per sentence |  | 1 |  | A/B | S | 
+| 111 |  |  | Percentage of unique All-Nouns per sentence |  | 1 |  | A/B | S | 
 | 112 |  |  | Number of unique content words per sentence |  | 1 |  | A | S/P | 
 | 113 |  |  | Percentage of unique content words per sentence |  | 1 |  | A | S/P | 
-| 114 |  |  | Number of unique idioms per sentence |  | 1 |  | A | S/P | 
-| 115 |  |  | Percentage of unique idioms per sentence |  | 1 |  | A | S/P | 
+| 114 |  |  | Number of unique idioms per sentence |  | 1 |  | N | S/P | 
+| 115 |  |  | Percentage of unique idioms per sentence |  | 1 |  | N | S/P | 
 | 116 |  |  | Percentage of unique adverbs per sentence |  | 1 |  | A | S/P | 
 | 117 |  |  | Number of unique adverbs per sentence |  | 1 |  | A | S/P | 
 | 118 |  | Phrases | total count of Noun phrases |  | 1 | 1 | A | S/P | 
@@ -182,18 +271,18 @@ In total, we provided 240 Chinese features, X for sentence-level, and X for pass
 | 172 |  |  | total length of flattened Trees |  |  | 1 | A/B | S/P | 
 | 173 |  |  | average length of flattened Trees per sentence |  |  | 1 | A | S/P | 
 | 174 |  |  | average length of flattened Trees per token (word) |  |  | 1 | A | S/P | 
-| 175 |  |  | Number of punctuation-clauses per sentence |  | 1 |  |  | S/P | 
-| 176 |  |  | Average dependency distance per sentence |  | 1 |  | A/B | S/P | 
-| 177 |  |  | Maximum dependency distance per sentence |  | 1 |  | A/B | S/P | 
-| 178 |  |  | Total number of dependency distances per sentence |  | 1 |  | A/B | S/P | 
-| 179 |  |  | Average number of dependency distances per sentence |  | 1 |  | A/B | S/P | 
-| 180 |  |  | Total number of complex sentences with complex syntactic structure | 1 |  |  | A | P | 
-| 181 |  |  | Proportion of simple sentences | 1 |  |  | A | P | 
-| 182 | Cohension | Entity Density | total number of Entities Mentions counts |  | 1 | 1 | B | S/P | 
-| 183 |  |  | average number of Entities Mentions counts per sentence |  | 1 | 1 | B | S/P | 
-| 184 |  |  | average number of Entities Mentions counts per token (word) |  |  | 1 | B | S/P | 
-| 185 |  |  | total number of unique Entities |  | 1 | 1 | B | S/P | 
-| 186 |  |  | average number of unique Entities per sentence |  | 1 | 1 | B | S/P | 
+| 175 |  |  | Number of punctuation-clauses per sentence |  | 1 |  |  | P | 
+| 176 |  |  | Average dependency distance per sentence |  | 1 |  | B | P | 
+| 177 |  |  | Maximum dependency distance per sentence |  | 1 |  | B | P | 
+| 178 |  |  | Total number of dependency distances per sentence |  | 1 |  | B | S/P | 
+| 179 |  |  | Average number of dependency distances per sentence |  | 1 |  | B | S/P | 
+| 180 |  |  | Total number of complex sentences with complex syntactic structure | 1 |  |  |  | P | 
+| 181 |  |  | Proportion of simple sentences | 1 |  |  |  | P | 
+| 182 | Cohension | Entity Density | total number of Entities Mentions counts |  | 1 | 1 | A/B | S/P | 
+| 183 |  |  | average number of Entities Mentions counts per sentence |  | 1 | 1 | A/B | S/P | 
+| 184 |  |  | average number of Entities Mentions counts per token (word) |  |  | 1 | A/B | S/P | 
+| 185 |  |  | total number of unique Entities |  | 1 | 1 | A/B | S/P | 
+| 186 |  |  | average number of unique Entities per sentence |  | 1 | 1 | A/B | S/P | 
 | 187 |  |  | average number of unique Entities per token (word) |  |  | 1 | A/B | S/P | 
 | 188 |  |  | Percentage of named entities per sentence |  | 1 |  | A/B | S/P | 
 | 189 |  |  | Percentage of named entities against total number of entities per sentence |  | 1 |  | A/B | S/P | 
@@ -225,9 +314,9 @@ In total, we provided 240 Chinese features, X for sentence-level, and X for pass
 | 215 |  |  | Percentage of pronouns per sentence |  | 1 |  | A/B | S/P | 
 | 216 |  |  | Number of unique pronouns per sentence | 1 | 1 |  | A/B | S/P | 
 | 217 |  |  | Percentage of unique pronouns per sentence | 1 |  |  | A/B | S/P | 
-| 218 |  |  | Total number of positive conjunctions | 1 |  |  | A/B | S/P | 
-| 219 |  |  | Total number of negative conjunctions | 1 |  |  | A/B | S/P | 
-| 220 |  |  | Total number of causal conjunctions | 1 |  |  | A/B | S/P | 
+| 218 |  |  | Total number of positive conjunctions | 1 |  |  | B | S/P | 
+| 219 |  |  | Total number of negative conjunctions | 1 |  |  | B | S/P | 
+| 220 |  |  | Total number of causal conjunctions | 1 |  |  | B | S/P | 
 | 221 |  |  | Total number of personal pronouns | 1 |  |  | A/B | S/P | 
 | 222 |  |  | Total number of first person pronouns | 1 |  |  | A/B | S/P | 
 | 223 |  |  | Total number of third person pronouns | 1 |  |  | A/B | S/P | 
