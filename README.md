@@ -66,14 +66,8 @@ Extract features
 
 each method returns a dictionary of the corresponding features
 """
-# Advanced Semantic (AdSem) Features
-WoKF = LingFeat.WoKF_() # Wikipedia Knowledge Features
-WBKF = LingFeat.WBKF_() # WeeBit Corpus Knowledge Features
-OSKF = LingFeat.OSKF_() # OneStopEng Corpus Knowledge Features
-
 # Discourse (Disco) Features
 EnDF = LingFeat.EnDF_() # Entity Density Features
-EnGF = LingFeat.EnGF_() # Entity Grid Features
 
 # Syntactic (Synta) Features
 PhrF = LingFeat.PhrF_() # Noun/Verb/Adj/Adv/... Phrasal Features
@@ -83,12 +77,9 @@ POSF = LingFeat.POSF_() # Noun/Verb/Adj/Adv/... Part-of-Speech Features
 # Lexico Semantic (LxSem) Features
 TTRF = LingFeat.TTRF_() # Type Token Ratio Features
 VarF = LingFeat.VarF_() # Noun/Verb/Adj/Adv Variation Features 
-PsyF = LingFeat.PsyF_() # Psycholinguistic Difficulty of Words (AoA Kuperman)
-WoLF = LingFeat.WorF_() # Word Familiarity from Frequency Count (SubtlexUS)
 
 # Shallow Traditional (ShTra) Features
 ShaF = LingFeat.ShaF_() # Shallow Features (e.g. avg number of tokens)
-TraF = LingFeat.TraF_() # Traditional Formulas 
 ```
 
 # Feature List
