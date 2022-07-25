@@ -4,39 +4,38 @@ ChiLingFeat is a Python research project for various Chinese handcrafted linguis
 
 | Index | Category | Sub-category | Descri. | Sung. | Lu. | Lee. | State | Fun | 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Shallow features | Character | Percentage of most-common characters per sentence |  | 1 |  |  | S | 
-| 2 |  |  | Percentage of second-most-common characters per sentence |  | 1 |  |  | S | 
-| 3 |  |  | Percentage of all common-characters per sentence |  | 1 |  |  | S | 
-| 4 |  |  | Percentage of low-stroke-count characters per sentence |  | 1 |  |  | S | 
-| 5 |  |  | Percentage of medium-stroke-count characters per sentence |  | 1 |  |  | S | 
-| 6 |  |  | Percentage of high-stroke-count characters per sentence |  | 1 |  |  | S | 
-| 7 |  |  | Average number of strokes per word per sentence |  | 1 |  |  | S | 
-| 8 |  |  | Percentage of HSK1 to HSK3-characters per sentence |  | 1 |  |  | S | 
-| 9 |  |  | Percentage of HSK4 to HSK5-characters per sentence |  | 1 |  |  | S | 
-| 10 |  |  | Percentage of HSK6-characters per sentence |  | 1 |  |  | S | 
-| 11 |  |  | Percentage of not-HSK-characters per sentence |  | 1 |  |  | S | 
-| 12 |  |  | Total number of characters containing 1 to 10 strokes | 1 |  |  | A | S | 
-| 13 |  |  | Total number of characters containing 11 to 20 strokes | 1 |  |  | A | S/P | 
-| 14 |  |  | Total number of two-character words | 1 |  |  | A | S/P | 
-| 15 |  |  | Total number of three-character words | 1 |  |  | A | S/P | 
-| 16 |  |  | average count of characters per sentence |  |  | 1 | A | S | 
-| 17 |  |  | average count of characters per token |  |  | 1 | A | S | 
-| 18 |  | Word | Average number of characters per word per sentence |  | 1 | 1 | A | S | 
-| 19 |  |  | Average number of characters per unique word per sentence |  | 1 |  |  | S | 
-| 20 |  |  | Number of two-character words per sentence |  | 1 |  |  | S | 
-| 21 |  |  | Percentage of two-character words per sentence |  | 1 |  |  | S | 
-| 22 |  |  | Number of three-character words per sentence |  | 1 |  |  | S | 
-| 23 |  |  | Percentage of three-character words per sentence |  | 1 |  |  | S | 
-| 24 |  |  | Number of four-character words per sentence |  | 1 |  |  | S | 
-| 25 |  |  | Percentage of four-character words per sentence |  | 1 |  |  | S | 
-| 26 |  |  | Number of five-up-character words per sentence |  | 1 |  |  | S | 
-| 27 |  |  | Percentage of five-up-character words per sentence |  | 1 |  |  | S | 
-| 28 |  |  | Percentage of HSK1 to HSK3-words per sentence |  | 1 |  |  | S | 
-| 29 |  |  | Percentage of HSK4 to HSK5-words per sentence |  | 1 |  |  | S | 
-| 30 |  |  | Percentage of HSK6-words per sentence |  | 1 |  |  | S | 
-| 31 |  |  | Percentage of Not-HSK-words per sentence |  | 1 |  |  | S | 
-| 32 |  |  | total count of tokens x total count of sentence | 
-| 1 | A | S/P | 
+| 1 | Shallow features | Character | Percentage of most-common characters per sentence |  | 1 |  | B | S | 
+| 2 |  |  | Percentage of second-most-common characters per sentence |  | 1 |  | B | S | 
+| 3 |  |  | Percentage of all common-characters per sentence |  | 1 |  | B | S | 
+| 4 |  |  | Percentage of low-stroke-count characters per sentence |  | 1 |  | B | S | 
+| 5 |  |  | Percentage of medium-stroke-count characters per sentence |  | 1 |  | B | S | 
+| 6 |  |  | Percentage of high-stroke-count characters per sentence |  | 1 |  | B | S | 
+| 7 |  |  | Average number of strokes per word per sentence |  | 1 |  | B | S | 
+| 8 |  |  | Percentage of HSK1 to HSK3-characters per sentence |  | 1 |  | B | S | 
+| 9 |  |  | Percentage of HSK4 to HSK5-characters per sentence |  | 1 |  | B | S | 
+| 10 |  |  | Percentage of HSK6-characters per sentence |  | 1 |  | B | S | 
+| 11 |  |  | Percentage of not-HSK-characters per sentence |  | 1 |  | B | S | 
+| 12 |  |  | Total number of characters containing 1 to 10 strokes | 1 |  |  | A/B | S | 
+| 13 |  |  | Total number of characters containing 11 to 20 strokes | 1 |  |  | A/B | S/P | 
+| 14 |  |  | Total number of two-character words | 1 |  |  | A/B | S/P | 
+| 15 |  |  | Total number of three-character words | 1 |  |  | A/B | S/P | 
+| 16 |  |  | average count of characters per sentence |  |  | 1 | A/B | S/P | 
+| 17 |  |  | average count of characters per token |  |  | 1 | A/B | S/P | 
+| 18 |  | Word | Average number of characters per word per sentence |  | 1 | 1 | A/B | S | 
+| 19 |  |  | Average number of characters per unique word per sentence |  | 1 |  | B | S | 
+| 20 |  |  | Number of two-character words per sentence |  | 1 |  | B | S | 
+| 21 |  |  | Percentage of two-character words per sentence |  | 1 |  | B | S | 
+| 22 |  |  | Number of three-character words per sentence |  | 1 |  | B | S | 
+| 23 |  |  | Percentage of three-character words per sentence |  | 1 |  | B | S | 
+| 24 |  |  | Number of four-character words per sentence |  | 1 |  | B | S | 
+| 25 |  |  | Percentage of four-character words per sentence |  | 1 |  | B | S | 
+| 26 |  |  | Number of five-up-character words per sentence |  | 1 |  | B | S | 
+| 27 |  |  | Percentage of five-up-character words per sentence |  | 1 |  | B | S | 
+| 28 |  |  | Percentage of HSK1 to HSK3-words per sentence |  | 1 |  | B | S | 
+| 29 |  |  | Percentage of HSK4 to HSK5-words per sentence |  | 1 |  | B | S | 
+| 30 |  |  | Percentage of HSK6-words per sentence |  | 1 |  | B | S | 
+| 31 |  |  | Percentage of Not-HSK-words per sentence |  | 1 |  | B | S | 
+| 32 |  |  | total count of tokens x total count of sentence | | 1 | A | S/P | 
 | 33 |  |  | sqrt(total count of tokens x total count of sentence) |  |  | 1 | A | S/P | 
 | 34 |  |  | log(total count of tokens)/log(total count of sentence) |  |  | 1 | A | S/P | 
 | 35 |  |  | average count of tokens per sentence | 1 |  | 1 | A | S | 
