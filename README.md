@@ -244,6 +244,3 @@ ChiLingFeat is a Python research project for various Chinese handcrafted linguis
 | 238 |  |  | log(unique tokens)/log(total tokens) (Bi-Logarithmic TTR) |  |  | 1 | A/B | S/P | 
 | 239 |  |  | (log(unique tokens))^2/log(total tokens/unique tokens) (Uber Index) |  |  | 1 | A/B | S/P | 
 | 240 |  |  | Measure of Textual Lexical Diversity (default TTR = 0.72) |  |  | 1 | A/B | S/P | 
-
-![image](https://user-images.githubusercontent.com/109120110/180699928-92456358-2df8-4453-b220-9125046db45c.png)
-
