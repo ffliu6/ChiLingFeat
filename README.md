@@ -4,48 +4,47 @@ ChiLingFeat is a Python research project for various Chinese handcrafted linguis
 
 | Index | Category | Sub-category | Description | Sung. | Lu. | Lee. | State | Fun | 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Shallow features | Character | Percentage of most-common characters per sentence |  | 1 |  |  | S | 
-| 2 |  |  | Percentage of second-most-common characters per sentence |  | 1 |  |  | S | 
-| 3 |  |  | Percentage of all common-characters per sentence |  | 1 |  |  | S | 
-| 4 |  |  | Percentage of low-stroke-count characters per sentence |  | 1 |  |  | S | 
-| 5 |  |  | Percentage of medium-stroke-count characters per sentence |  | 1 |  |  | S | 
-| 6 |  |  | Percentage of high-stroke-count characters per sentence |  | 1 |  |  | S | 
-| 7 |  |  | Average number of strokes per word per sentence |  | 1 |  |  | S | 
-| 8 |  |  | Percentage of HSK1 to HSK3-characters per sentence |  | 1 |  |  | S | 
-| 9 |  |  | Percentage of HSK4 to HSK5-characters per sentence |  | 1 |  |  | S | 
-| 10 |  |  | Percentage of HSK6-characters per sentence |  | 1 |  |  | S | 
-| 11 |  |  | Percentage of not-HSK-characters per sentence |  | 1 |  |  | S | 
-| 12 |  |  | Total number of characters containing 1 to 10 strokes | 1 |  |  | A | S | 
-| 13 |  |  | Total number of characters containing 11 to 20 strokes | 1 |  |  | A | S/P | 
-| 14 |  |  | Total number of two-character words | 1 |  |  | A | S/P | 
-| 15 |  |  | Total number of three-character words | 1 |  |  | A | S/P | 
-| 16 |  |  | average count of characters per sentence |  |  | 1 | A | S | 
-| 17 |  |  | average count of characters per token |  |  | 1 | A | S | 
-| 18 |  | Word | Average number of characters per word per sentence |  | 1 | 1 | A | S | 
-| 19 |  |  | Average number of characters per unique word per sentence |  | 1 |  |  | S | 
-| 20 |  |  | Number of two-character words per sentence |  | 1 |  |  | S | 
-| 21 |  |  | Percentage of two-character words per sentence |  | 1 |  |  | S | 
-| 22 |  |  | Number of three-character words per sentence |  | 1 |  |  | S | 
-| 23 |  |  | Percentage of three-character words per sentence |  | 1 |  |  | S | 
-| 24 |  |  | Number of four-character words per sentence |  | 1 |  |  | S | 
-| 25 |  |  | Percentage of four-character words per sentence |  | 1 |  |  | S | 
-| 26 |  |  | Number of five-up-character words per sentence |  | 1 |  |  | S | 
-| 27 |  |  | Percentage of five-up-character words per sentence |  | 1 |  |  | S | 
-| 28 |  |  | Percentage of HSK1 to HSK3-words per sentence |  | 1 |  |  | S | 
-| 29 |  |  | Percentage of HSK4 to HSK5-words per sentence |  | 1 |  |  | S | 
-| 30 |  |  | Percentage of HSK6-words per sentence |  | 1 |  |  | S | 
-| 31 |  |  | Percentage of Not-HSK-words per sentence |  | 1 |  |  | S | 
-| 32 |  |  | total count of tokens x total count of sentence | 
-| 1 | A | S/P | 
-| 33 |  |  | sqrt(total count of tokens x total count of sentence) |  |  | 1 | A | S/P | 
-| 34 |  |  | log(total count of tokens)/log(total count of sentence) |  |  | 1 | A | S/P | 
-| 35 |  |  | average count of tokens per sentence | 1 |  | 1 | A | S | 
+| 1 | Shallow features | Character | Percentage of most-common characters per sentence |  | 1 |  | B | S | 
+| 2 |  |  | Percentage of second-most-common characters per sentence |  | 1 |  | B | S | 
+| 3 |  |  | Percentage of all common-characters per sentence |  | 1 |  | B | S | 
+| 4 |  |  | Percentage of low-stroke-count characters per sentence |  | 1 |  | B | S | 
+| 5 |  |  | Percentage of medium-stroke-count characters per sentence |  | 1 |  | B | S | 
+| 6 |  |  | Percentage of high-stroke-count characters per sentence |  | 1 |  | B | S | 
+| 7 |  |  | Average number of strokes per word per sentence |  | 1 |  | B | S | 
+| 8 |  |  | Percentage of HSK1 to HSK3-characters per sentence |  | 1 |  | B | S | 
+| 9 |  |  | Percentage of HSK4 to HSK5-characters per sentence |  | 1 |  | B | S | 
+| 10 |  |  | Percentage of HSK6-characters per sentence |  | 1 |  | B | S | 
+| 11 |  |  | Percentage of not-HSK-characters per sentence |  | 1 |  | B | S | 
+| 12 |  |  | Total number of characters containing 1 to 10 strokes | 1 |  |  | A/B | S | 
+| 13 |  |  | Total number of characters containing 11 to 20 strokes | 1 |  |  | A/B | S/P | 
+| 14 |  |  | Total number of two-character words | 1 |  |  | A/B | S/P | 
+| 15 |  |  | Total number of three-character words | 1 |  |  | A/B | S/P | 
+| 16 |  |  | average count of characters per sentence |  |  | 1 | A/B | S | 
+| 17 |  |  | average count of characters per token |  |  | 1 | A/B | S | 
+| 18 |  | Word | Average number of characters per word per sentence |  | 1 | 1 | A/B | S | 
+| 19 |  |  | Average number of characters per unique word per sentence |  | 1 |  | B | S | 
+| 20 |  |  | Number of two-character words per sentence |  | 1 |  | B | S | 
+| 21 |  |  | Percentage of two-character words per sentence |  | 1 |  | B | S | 
+| 22 |  |  | Number of three-character words per sentence |  | 1 |  | B | S | 
+| 23 |  |  | Percentage of three-character words per sentence |  | 1 |  | B | S | 
+| 24 |  |  | Number of four-character words per sentence |  | 1 |  | B | S | 
+| 25 |  |  | Percentage of four-character words per sentence |  | 1 |  | B | S | 
+| 26 |  |  | Number of five-up-character words per sentence |  | 1 |  | B | S | 
+| 27 |  |  | Percentage of five-up-character words per sentence |  | 1 |  | B | S | 
+| 28 |  |  | Percentage of HSK1 to HSK3-words per sentence |  | 1 |  | B | S | 
+| 29 |  |  | Percentage of HSK4 to HSK5-words per sentence |  | 1 |  | B | S | 
+| 30 |  |  | Percentage of HSK6-words per sentence |  | 1 |  | B | S | 
+| 31 |  |  | Percentage of Not-HSK-words per sentence |  | 1 |  | B | S | 
+| 32 |  |  | total count of tokens x total count of sentence |  | 1 | A/B | S/P | 
+| 33 |  |  | sqrt(total count of tokens x total count of sentence) |  |  | 1 | A/B | S/P | 
+| 34 |  |  | log(total count of tokens)/log(total count of sentence) |  |  | 1 | A/B | S/P | 
+| 35 |  |  | average count of tokens per sentence | 1 |  | 1 | A/B | S | 
 | 36 |  |  | average count of syllables per sentence |  |  | 1 | N | *N | 
 | 37 |  |  | average count of syllables per token |  |  | 1 | N | *N | 
 | 38 |  | Sentence | Number of multi-character words per sentence |  | 1 |  |  | S | 
-| 39 |  |  | Number of words per sentence |  | 1 |  |  | S | 
-| 40 |  |  | Number of characters per sentence |  | 1 |  |  | S | 
-| 41 |  |  | Number of characters (including punctuations, numerical, and symbols) per sentence |  | 1 |  |  | S | 
+| 39 |  |  | Number of words per sentence |  | 1 |  | B | S | 
+| 40 |  |  | Number of characters per sentence |  | 1 |  | B | S | 
+| 41 |  |  | Number of characters (including punctuations, numerical, and symbols) per sentence |  | 1 |  | B | S | 
 | 42 |  |  | Total word difficulty, as according to 8,000 Chinese Words, divided by the total number of words | 1 |  |  |  | S/P | 
 | 43 |  |  | Sum of the squares of word difficulty, as defined by 8,000 Chinese Words, divided by the total number of words | 1 |  |  |  | S/P | 
 | 44 |  |  | Sum of words belonging to the vantage and effective operational proficiency levels of 8,000 Chinese Words | 1 |  |  |  | S/P | 
@@ -56,54 +55,54 @@ ChiLingFeat is a Python research project for various Chinese handcrafted linguis
 | 49 |  |  | AutoRea_S |  |  | 1 | A | P | 
 | 50 |  |  | FleschG_S |  |  | 1 | A | P | 
 | 51 |  |  | LinseaW_S |  |  | 1 | A | P | 
-| 52 | Syntactic features | POS | total count of Noun POS tags |  | 1 | 1 | A | S/P | 
-| 53 |  |  | average count of Noun POS tags per sentence |  | 1 | 1 | A | S | 
-| 54 |  |  | average count of Noun POS tags per token |  |  | 1 | A | S/P | 
-| 55 |  |  | ratio of Noun POS count to Adjective POS count |  |  | 1 | A | S/P | 
-| 56 |  |  | ratio of Noun POS count to Verb POS count |  |  | 1 | A | S/P | 
-| 57 |  |  | ratio of Noun POS count to Adverb POS count |  |  | 1 | A | S/P | 
-| 58 |  |  | ratio of Noun POS count to Subordinating Conjunction count |  |  | 1 | A | S/P | 
-| 59 |  |  | ratio of Noun POS count to Coordinating Conjunction count |  |  | 1 | A | S/P | 
-| 60 |  |  | total count of Verb POS tags |  | 1 | 1 | A | S/P | 
-| 61 |  |  | average count of Verb POS tags per sentence |  | 1 | 1 | A | S | 
-| 62 |  |  | average count of Verb POS tags per token |  |  | 1 | A | S/P | 
-| 63 |  |  | ratio of Verb POS count to Adjective POS count |  |  | 1 | A | S/P | 
-| 64 |  |  | ratio of Verb POS count to Noun POS count |  |  | 1 | A | S/P | 
-| 65 |  |  | ratio of Verb POS count to Adverb POS count |  |  | 1 | A | S/P | 
-| 66 |  |  | ratio of Verb POS count to Subordinating Conjunction count |  |  | 1 | A | S/P | 
-| 67 |  |  | ratio of Verb POS count to Coordinating Conjunction count |  |  | 1 | A | S/P | 
-| 68 |  |  | total count of Adjective POS tags |  | 1 | 1 | A | S/P | 
-| 69 |  |  | average count of Adjective POS tags per sentence |  | 1 | 1 | A | S | 
-| 70 |  |  | average count of Adjective POS tags per token |  |  | 1 | A | S/P | 
-| 71 |  |  | ratio of Adjective POS count to Noun POS count |  |  | 1 | A | S/P | 
-| 72 |  |  | ratio of Adjective POS count to Verb POS count |  |  | 1 | A | S/P | 
-| 73 |  |  | ratio of Adjective POS count to Adverb POS count |  |  | 1 | A | S/P | 
-| 74 |  |  | ratio of Adjective POS count to Subordinating Conjunction count |  |  | 1 | A | S/P | 
-| 75 |  |  | ratio of Adjective POS count to Coordinating Conjunction count |  |  | 1 | A | S/P | 
-| 76 |  |  | total count of Adverb POS tags |  | 1 | 1 | A | S/P | 
-| 77 |  |  | average count of Adverb POS tags per sentence |  | 1 | 1 | A | S | 
-| 78 |  |  | average count of Adverb POS tags per token |  |  | 1 | A | S/P | 
-| 79 |  |  | ratio of Adverb POS count to Adjective POS count |  |  | 1 | A | S/P | 
-| 80 |  |  | ratio of Adverb POS count to Noun POS count |  |  | 1 | A | S/P | 
-| 81 |  |  | ratio of Adverb POS count to Verb POS count |  |  | 1 | A | S/P | 
-| 82 |  |  | ratio of Adverb POS count to Subordinating Conjunction count |  |  | 1 | A | S/P | 
-| 83 |  |  | ratio of Adverb POS count to Coordinating Conjunction count |  |  | 1 | A | S/P | 
-| 84 |  |  | total count of Subordinating Conjunction POS tags | 1 | 1 | 1 | A | S/P | 
-| 85 |  |  | average count of Subordinating Conjunction POS tags per sentence |  | 1 | 1 | A | S | 
-| 86 |  |  | average count of Subordinating Conjunction POS tags per token |  |  | 1 | A | S/P | 
-| 87 |  |  | ratio of Subordinating Conjunction POS count to Adjective POS count |  |  | 1 | A | S/P | 
-| 88 |  |  | ratio of Subordinating Conjunction POS count to Noun POS count |  |  | 1 | A | S/P | 
-| 89 |  |  | ratio of Subordinating Conjunction POS count to Verb POS count |  |  | 1 | A | S/P | 
-| 90 |  |  | ratio of Subordinating Conjunction POS count to Adverb POS count |  |  | 1 | A | S/P | 
-| 91 |  |  | ratio of Subordinating Conjunction POS count to Coordinating Conjunction count |  |  | 1 | A | S/P | 
-| 92 |  |  | total count of Coordinating Conjunction POS tags | 1 | 1 | 1 | A | S/P | 
-| 93 |  |  | average count of Coordinating Conjunction POS tags per sentence |  | 1 | 1 | A | S | 
-| 94 |  |  | average count of Coordinating Conjunction POS tags per token |  |  | 1 | A | S/P | 
-| 95 |  |  | ratio of Coordinating Conjunction POS count to Adjective POS count |  |  | 1 | A | S/P | 
-| 96 |  |  | ratio of Coordinating Conjunction POS count to Noun POS count |  |  | 1 | A | S/P | 
-| 97 |  |  | ratio of Coordinating Conjunction POS count to Verb POS count |  |  | 1 | A | S/P | 
-| 98 |  |  | ratio of Coordinating Conjunction POS count to Adverb POS count |  |  | 1 | A | S/P | 
-| 99 |  |  | ratio of Coordinating Conjunction POS count to Subordinating Conjunction count |  |  | 1 | A | S/P | 
+| 52 | Syntactic features | POS | total count of Noun POS tags |  | 1 | 1 | A/B | S/P | 
+| 53 |  |  | average count of Noun POS tags per sentence |  | 1 | 1 | A/B | S/P | 
+| 54 |  |  | average count of Noun POS tags per token |  |  | 1 | A/B | S/P | 
+| 55 |  |  | ratio of Noun POS count to Adjective POS count |  |  | 1 | A/B | S/P | 
+| 56 |  |  | ratio of Noun POS count to Verb POS count |  |  | 1 | A/B | S/P | 
+| 57 |  |  | ratio of Noun POS count to Adverb POS count |  |  | 1 | A/B | S/P | 
+| 58 |  |  | ratio of Noun POS count to Subordinating Conjunction count |  |  | 1 | A/B | S/P | 
+| 59 |  |  | ratio of Noun POS count to Coordinating Conjunction count |  |  | 1 | A/B | S/P | 
+| 60 |  |  | total count of Verb POS tags |  | 1 | 1 | A/B | S/P | 
+| 61 |  |  | average count of Verb POS tags per sentence |  | 1 | 1 | A/B | S/P | 
+| 62 |  |  | average count of Verb POS tags per token |  |  | 1 | A/B | S/P | 
+| 63 |  |  | ratio of Verb POS count to Adjective POS count |  |  | 1 | A/B | S/P | 
+| 64 |  |  | ratio of Verb POS count to Noun POS count |  |  | 1 | A/B | S/P | 
+| 65 |  |  | ratio of Verb POS count to Adverb POS count |  |  | 1 | A/B | S/P | 
+| 66 |  |  | ratio of Verb POS count to Subordinating Conjunction count |  |  | 1 | A/B | S/P | 
+| 67 |  |  | ratio of Verb POS count to Coordinating Conjunction count |  |  | 1 | A/B | S/P | 
+| 68 |  |  | total count of Adjective POS tags |  | 1 | 1 | A/B | S/P | 
+| 69 |  |  | average count of Adjective POS tags per sentence |  | 1 | 1 | A/B | S/P | 
+| 70 |  |  | average count of Adjective POS tags per token |  |  | 1 | A/B | S/P | 
+| 71 |  |  | ratio of Adjective POS count to Noun POS count |  |  | 1 | A/B | S/P | 
+| 72 |  |  | ratio of Adjective POS count to Verb POS count |  |  | 1 | A/B | S/P | 
+| 73 |  |  | ratio of Adjective POS count to Adverb POS count |  |  | 1 | A/B | S/P | 
+| 74 |  |  | ratio of Adjective POS count to Subordinating Conjunction count |  |  | 1 | A/B | S/P | 
+| 75 |  |  | ratio of Adjective POS count to Coordinating Conjunction count |  |  | 1 | A/B | S/P | 
+| 76 |  |  | total count of Adverb POS tags |  | 1 | 1 | A/B | S/P | 
+| 77 |  |  | average count of Adverb POS tags per sentence |  | 1 | 1 | A/B | S/P | 
+| 78 |  |  | average count of Adverb POS tags per token |  |  | 1 | A/B | S/P | 
+| 79 |  |  | ratio of Adverb POS count to Adjective POS count |  |  | 1 | A/B | S/P | 
+| 80 |  |  | ratio of Adverb POS count to Noun POS count |  |  | 1 | A/B | S/P | 
+| 81 |  |  | ratio of Adverb POS count to Verb POS count |  |  | 1 | A/B | S/P | 
+| 82 |  |  | ratio of Adverb POS count to Subordinating Conjunction count |  |  | 1 | A/B | S/P | 
+| 83 |  |  | ratio of Adverb POS count to Coordinating Conjunction count |  |  | 1 | A/B | S/P | 
+| 84 |  |  | total count of Subordinating Conjunction POS tags | 1 | 1 | 1 | A/B | S/P | 
+| 85 |  |  | average count of Subordinating Conjunction POS tags per sentence |  | 1 | 1 | A/B | S/P | 
+| 86 |  |  | average count of Subordinating Conjunction POS tags per token |  |  | 1 | A/B | S/P | 
+| 87 |  |  | ratio of Subordinating Conjunction POS count to Adjective POS count |  |  | 1 | A/B | S/P | 
+| 88 |  |  | ratio of Subordinating Conjunction POS count to Noun POS count |  |  | 1 | A/B | S/P | 
+| 89 |  |  | ratio of Subordinating Conjunction POS count to Verb POS count |  |  | 1 | A/B | S/P | 
+| 90 |  |  | ratio of Subordinating Conjunction POS count to Adverb POS count |  |  | 1 | A/B | S/P | 
+| 91 |  |  | ratio of Subordinating Conjunction POS count to Coordinating Conjunction count |  |  | 1 | A/B | S/P | 
+| 92 |  |  | total count of Coordinating Conjunction POS tags | 1 | 1 | 1 | A/B | S/P | 
+| 93 |  |  | average count of Coordinating Conjunction POS tags per sentence |  | 1 | 1 | A/B | S/P | 
+| 94 |  |  | average count of Coordinating Conjunction POS tags per token |  |  | 1 | A/B | S/P | 
+| 95 |  |  | ratio of Coordinating Conjunction POS count to Adjective POS count |  |  | 1 | A/B | S/P | 
+| 96 |  |  | ratio of Coordinating Conjunction POS count to Noun POS count |  |  | 1 | A/B | S/P | 
+| 97 |  |  | ratio of Coordinating Conjunction POS count to Verb POS count |  |  | 1 | A/B | S/P | 
+| 98 |  |  | ratio of Coordinating Conjunction POS count to Adverb POS count |  |  | 1 | A/B | S/P | 
+| 99 |  |  | ratio of Coordinating Conjunction POS count to Subordinating Conjunction count |  |  | 1 | A/B | S/P | 
 | 100 |  |  | total count of Content words | 1 | 1 | 1 | A | S/P | 
 | 101 |  |  | average count of Content words per sentence |  | 1 | 1 |  | S | 
 | 102 |  |  | average count of Content words per token |  |  | 1 |  | S/P | 
@@ -112,16 +111,16 @@ ChiLingFeat is a Python research project for various Chinese handcrafted linguis
 | 105 |  |  | average count of Function words per token |  |  | 1 |  | S/P | 
 | 106 |  |  | ratio of Content words to Function words |  |  | 1 |  | S/P | 
 | 107 |  |  | Logarithm of the average frequency of content words, according to Education Ministry word frequency list | 1 |  |  |  | *N | 
-| 108 |  |  | Percentage of unique adjectives per sentence |  | 1 |  |  | S | 
-| 109 |  |  | Number of unique adjectives per sentence |  | 1 |  |  | S | 
-| 110 |  |  | Percentage of unique functional words per sentence |  | 1 |  |  | S | 
-| 111 |  |  | Number of unique functional words per sentence |  | 1 |  |  | S | 
-| 112 |  |  | Number of unique verbs per sentence |  | 1 |  |  | S | 
-| 113 |  |  | Percentage of unique verbs per sentence |  | 1 |  |  | S | 
-| 114 |  |  | Number of unique nouns per sentence |  | 1 |  |  | S | 
-| 115 |  |  | Percentage of unique nouns per sentence |  | 1 |  |  | S | 
-| 116 |  |  | Number of unique All-Nouns per sentence |  | 1 |  |  | S | 
-| 117 |  |  | Percentage of unique All-Nouns per sentence |  | 1 |  |  | S | 
+| 108 |  |  | Percentage of unique adjectives per sentence |  | 1 |  | B | S | 
+| 109 |  |  | Number of unique adjectives per sentence |  | 1 |  | B | S | 
+| 110 |  |  | Percentage of unique functional words per sentence |  | 1 |  | B | S | 
+| 111 |  |  | Number of unique functional words per sentence |  | 1 |  | B | S | 
+| 112 |  |  | Number of unique verbs per sentence |  | 1 |  | B | S | 
+| 113 |  |  | Percentage of unique verbs per sentence |  | 1 |  | B | S | 
+| 114 |  |  | Number of unique nouns per sentence |  | 1 |  | B | S | 
+| 115 |  |  | Percentage of unique nouns per sentence |  | 1 |  | B | S | 
+| 116 |  |  | Number of unique All-Nouns per sentence |  | 1 |  | B | S | 
+| 117 |  |  | Percentage of unique All-Nouns per sentence |  | 1 |  | B | S | 
 | 118 |  |  | Number of unique content words per sentence |  | 1 |  | A | S | 
 | 119 |  |  | Percentage of unique content words per sentence |  | 1 |  | A | S | 
 | 120 |  |  | Number of unique idioms per sentence |  | 1 |  | A | S | 
@@ -129,7 +128,7 @@ ChiLingFeat is a Python research project for various Chinese handcrafted linguis
 | 122 |  |  | Percentage of unique adverbs per sentence |  | 1 |  | A | S | 
 | 123 |  |  | Number of unique adverbs per sentence |  | 1 |  | A | S | 
 | 124 |  | Phrases | total count of Noun phrases |  | 1 | 1 | A | S/P | 
-| 125 |  |  | average count of Noun phrases per sentence |  |  | 1 | A | S | 
+| 125 |  |  | average count of Noun phrases per sentence |  |  | 1 | A | S/P | 
 | 126 |  |  | average count of Noun phrases per token |  |  | 1 | A | S/P | 
 | 127 |  |  | ratio of Noun phrases count to Verb phrases count |  |  | 1 | A | S/P | 
 | 128 |  |  | ratio of Noun phrases count to Subordinate Clauses count |  |  | 1 | A | S/P | 
@@ -179,30 +178,30 @@ ChiLingFeat is a Python research project for various Chinese handcrafted linguis
 | 172 |  |  | Average length of noun phrases per sentence |  | 1 |  | A | S | 
 | 173 |  |  | Average length of verbal phrases per sentence |  | 1 |  | A | S | 
 | 174 |  |  | Average length of prepositional phrases per sentence |  | 1 |  | A | S | 
-| 175 |  | Clauses | total Tree height of all sentences |  |  | 1 |  | S/P | 
-| 176 |  |  | average Tree height per sentence |  | 1 | 1 |  | S/P | 
-| 177 |  |  | average Tree height per token (word) |  |  | 1 |  | S/P | 
-| 178 |  |  | total length of flattened Trees |  |  | 1 |  | S/P | 
-| 179 |  |  | average length of flattened Trees per sentence |  |  | 1 |  | S/P | 
-| 180 |  |  | average length of flattened Trees per token (word) |  |  | 1 |  | S/P | 
-| 181 |  |  | Number of punctuation-clauses per sentence |  | 1 |  |  | S/P | 
-| 182 |  |  | Average dependency distance per sentence |  | 1 |  | A | S/P | 
-| 183 |  |  | Maximum dependency distance per sentence |  | 1 |  | A | S/P | 
-| 184 |  |  | Total number of dependency distances per sentence |  | 1 |  | A | S/P | 
-| 185 |  |  | Average number of dependency distances per sentence |  | 1 |  | A | S/P | 
-| 186 |  |  | Total number of complex sentences with complex syntactic structure | 1 |  |  | A | P | 
-| 187 |  |  | Proportion of simple sentences | 1 |  |  | A | P | 
-| 187 | Cohension | Entity Density | total number of Entities Mentions counts |  | 1 | 1 |  | S/P | 
-| 188 |  |  | average number of Entities Mentions counts per sentence |  | 1 | 1 |  | S/P | 
-| 189 |  |  | average number of Entities Mentions counts per token (word) |  |  | 1 |  | S/P | 
-| 190 |  |  | total number of unique Entities |  | 1 | 1 |  | S/P | 
-| 191 |  |  | average number of unique Entities per sentence |  | 1 | 1 |  | S/P | 
-| 192 |  |  | average number of unique Entities per token (word) |  |  | 1 | A | S/P | 
-| 193 |  |  | Percentage of named entities per sentence |  | 1 |  | A | S/P | 
-| 194 |  |  | Percentage of named entities against total number of entities per sentence |  | 1 |  | A | S/P | 
-| 195 |  |  | Percentage of Not-NE nouns per sentence |  | 1 |  | A | S/P | 
-| 196 |  |  | Number of Not-NE nouns per sentence |  | 1 |  | A | S/P | 
-| 197 |  |  | Number of Not-Entity nouns per sentence |  | 1 |  | A | S/P | 
+| 175 |  | Clauses | total Tree height of all sentences |  |  | 1 | B | S/P | 
+| 176 |  |  | average Tree height per sentence |  | 1 | 1 | B | S/P | 
+| 177 |  |  | average Tree height per token (word) |  |  | 1 | B | S/P | 
+| 178 |  |  | total length of flattened Trees |  |  | 1 | B | S/P | 
+| 179 |  |  | average length of flattened Trees per sentence |  |  | 1 | B | S/P | 
+| 180 |  |  | average length of flattened Trees per token (word) |  |  | 1 | B | S/P | 
+| 181 |  |  | Number of punctuation-clauses per sentence |  | 1 |  | B | S/P | 
+| 182 |  |  | Average dependency distance per sentence |  | 1 |  | A/B | S/P | 
+| 183 |  |  | Maximum dependency distance per sentence |  | 1 |  | A/B | S/P | 
+| 184 |  |  | Total number of dependency distances per sentence |  | 1 |  | A/B | S/P | 
+| 185 |  |  | Average number of dependency distances per sentence |  | 1 |  | A/B | S/P | 
+| 186 |  |  | Total number of complex sentences with complex syntactic structure | 1 |  |  | A/B | P | 
+| 187 |  |  | Proportion of simple sentences | 1 |  |  | A/B | P | 
+| 187 | Cohension | Entity Density | total number of Entities Mentions counts |  | 1 | 1 | B | S/P | 
+| 188 |  |  | average number of Entities Mentions counts per sentence |  | 1 | 1 | B | S/P | 
+| 189 |  |  | average number of Entities Mentions counts per token (word) |  |  | 1 | B | S/P | 
+| 190 |  |  | total number of unique Entities |  | 1 | 1 | B | S/P | 
+| 191 |  |  | average number of unique Entities per sentence |  | 1 | 1 | B | S/P | 
+| 192 |  |  | average number of unique Entities per token (word) |  |  | 1 | A/B | S/P | 
+| 193 |  |  | Percentage of named entities per sentence |  | 1 |  | A/B | S/P | 
+| 194 |  |  | Percentage of named entities against total number of entities per sentence |  | 1 |  | A/B | S/P | 
+| 195 |  |  | Percentage of Not-NE nouns per sentence |  | 1 |  | A/B | S/P | 
+| 196 |  |  | Number of Not-NE nouns per sentence |  | 1 |  | A/B | S/P | 
+| 197 |  |  | Number of Not-Entity nouns per sentence |  | 1 |  | A/B | S/P | 
 | 198 |  |  | ratio of ss transitions to total |  |  | 1 | A | *N | 
 | 199 |  |  | ratio of so transitions to total |  |  | 1 | A | *N | 
 | 200 |  |  | ratio of sx transitions to total |  |  | 1 | A | *N | 
@@ -222,20 +221,19 @@ ChiLingFeat is a Python research project for various Chinese handcrafted linguis
 | 214 |  |  | Local Coherence for PA score |  |  | 1 | A | *N | 
 | 215 |  |  | Local Coherence for PW score |  |  | 1 | A | *N | 
 | 216 |  |  | Local Coherence distance for PU score |  |  | 1 | A | *N | 
-| 217 |  | Discourse | Percentage of conjunctions per sentence |  | 1 |  | N | S/P | 
-| 218 |  |  | Number of unique conjunctions per sentence | 1 | 1 |  | N | S/P | 
-| 219 |  |  | Percentage of unique conjunctions per sentence |  | 1 |  | N | S/P | 
-| 220 |  |  | Percentage of pronouns per sentence |  | 1 |  | A | S/P | 
-| 221 |  |  | Number of unique pronouns per sentence | 1 | 1 |  | A | S/P | 
-| 222 |  |  | Percentage of unique pronouns per sentence | 1 |  |  | A | S/P | 
-| 223 |  |  | Total number of positive conjunctions | 1 |  |  | A | S/P | 
-| 224 |  |  | Total number of negative conjunctions | 1 |  |  | A | S/P | 
-| 225 |  |  | Total number of causal conjunctions | 1 |  |  | A | S/P | 
-| 226 |  |  | Total number of personal pronouns | 1 |  |  | A | S/P | 
-| 227 |  |  | Total number of first person pronouns | 1 |  |  | A | S/P | 
-| 228 |  |  | Total number of third person pronouns | 1 |  |  | A | S/P | 
-| 229 | Lee’s | Knowledge | 
-| （PS: delete temp） | Semantic Richness, 50 topics extracted from Wikipedia |  |  | 1 | A | 
+| 217 |  | Discourse | Percentage of conjunctions per sentence |  | 1 |  | B | S/P | 
+| 218 |  |  | Number of unique conjunctions per sentence | 1 | 1 |  | B | S/P | 
+| 219 |  |  | Percentage of unique conjunctions per sentence |  | 1 |  | B | S/P | 
+| 220 |  |  | Percentage of pronouns per sentence |  | 1 |  | A/B | S/P | 
+| 221 |  |  | Number of unique pronouns per sentence | 1 | 1 |  | A/B | S/P | 
+| 222 |  |  | Percentage of unique pronouns per sentence | 1 |  |  | A/B | S/P | 
+| 223 |  |  | Total number of positive conjunctions | 1 |  |  | A/B | S/P | 
+| 224 |  |  | Total number of negative conjunctions | 1 |  |  | A/B | S/P | 
+| 225 |  |  | Total number of causal conjunctions | 1 |  |  | A/B | S/P | 
+| 226 |  |  | Total number of personal pronouns | 1 |  |  | A/B | S/P | 
+| 227 |  |  | Total number of first person pronouns | 1 |  |  | A/B | S/P | 
+| 228 |  |  | Total number of third person pronouns | 1 |  |  | A/B | S/P | 
+| 229 | Lee’s | Knowledge | （PS: delete temp） | Semantic Richness, 50 topics extracted from Wikipedia |  |  | 1 | A | 
 | 230 |  |  | Semantic Clarity, 50 topics extracted from Wikipedia |  |  | 1 | A | 
 | 231 |  |  | Semantic Noise, 50 topics extracted from Wikipedia |  |  | 1 | A | 
 | 232 |  |  | Number of topics, 50 topics extracted from Wikipedia |  |  | 1 | A | 
