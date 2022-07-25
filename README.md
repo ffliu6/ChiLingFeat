@@ -213,8 +213,8 @@ In total, we provided 240 Chinese features, X for sentence-level, and X for pass
 | 203 |  |  | ratio of xx transitions to total |  |  | 1 | A | P | 
 | 204 |  |  | ratio of xn transitions to total |  |  | 1 | A | P | 
 | 205 |  |  | ratio of ns transitions to total |  |  | 1 | A | P | 
-| 206 |  |  | ratio of no transitions to total |  |  | 1 |  | P | 
-| 207 |  |  | ratio of nx transitions to total |  |  | 1 |  | P | 
+| 206 |  |  | ratio of no transitions to total |  |  | 1 | A | P | 
+| 207 |  |  | ratio of nx transitions to total |  |  | 1 | A | P | 
 | 208 |  |  | ratio of nn transitions to total |  |  | 1 | A | P | 
 | 209 |  |  | Local Coherence for PA score |  |  | 1 | A | P | 
 | 210 |  |  | Local Coherence for PW score |  |  | 1 | A | P | 
