@@ -102,12 +102,12 @@ In total, we provided 240 Chinese features, X for sentence-level, and X for pass
 | 92 |  |  | ratio of Coordinating Conjunction POS count to Adverb POS count |  |  | 1 | A/B | S/P | 
 | 93 |  |  | ratio of Coordinating Conjunction POS count to Subordinating Conjunction count |  |  | 1 | A/B | S/P | 
 | 94 |  |  | total count of Content words | 1 | 1 | 1 | A/B | S/P | 
-| 95 |  |  | average count of Content words per sentence |  | 1 | 1 |  | S/P | 
-| 96 |  |  | average count of Content words per token |  |  | 1 |  | S/P | 
-| 97 |  |  | total count of Function words |  | 1 | 1 |  | S/P | 
-| 98 |  |  | average count of Function words per sentence |  | 1 | 1 |  | S/P | 
-| 99 |  |  | average count of Function words per token |  |  | 1 |  | S/P | 
-| 100 |  |  | ratio of Content words to Function words |  |  | 1 |  | S/P | 
+| 95 |  |  | average count of Content words per sentence |  | 1 | 1 | A | S/P | 
+| 96 |  |  | average count of Content words per token |  |  | 1 | A | S/P | 
+| 97 |  |  | total count of Function words |  | 1 | 1 | A | S/P | 
+| 98 |  |  | average count of Function words per sentence |  | 1 | 1 | A | S/P | 
+| 99 |  |  | average count of Function words per token |  |  | 1 | A | S/P | 
+| 100 |  |  | ratio of Content words to Function words |  |  | 1 | A | S/P | 
 | 101 |  |  | Logarithm of the average frequency of content words, according to Education Ministry word frequency list | 1 |  |  |  | *N | 
 | 102 |  |  | Percentage of unique adjectives per sentence |  | 1 |  | B | S | 
 | 103 |  |  | Number of unique adjectives per sentence |  | 1 |  | B | S | 
@@ -167,9 +167,9 @@ In total, we provided 240 Chinese features, X for sentence-level, and X for pass
 | 157 |  |  | ratio of Adj phrases count to Adv phrases count |  |  | 1 | A | S/P | 
 | 158 |  |  | total count of Adverb phrases |  |  | 1 | A | S/P | 
 | 159 |  |  | average count of Adverb phrases per sentence |  |  | 1 | A | S/P | 
-| 160 |  |  | average count of Adverb phrases per token |  |  | 1 |  | S/P | 
-| 161 |  |  | ratio of Adv phrases count to Noun phrases count |  |  | 1 |  | S/P | 
-| 162 |  |  | ratio of Adv phrases count to Verb phrases count |  |  | 1 |  | S/P | 
+| 160 |  |  | average count of Adverb phrases per token |  |  | 1 | A | S/P | 
+| 161 |  |  | ratio of Adv phrases count to Noun phrases count |  |  | 1 | A | S/P | 
+| 162 |  |  | ratio of Adv phrases count to Verb phrases count |  |  | 1 | A | S/P | 
 | 163 |  |  | ratio of Adv phrases count to Subordinate Clauses count |  |  | 1 | A | S/P | 
 | 164 |  |  | ratio of Adv phrases count to Prep phrases count |  |  | 1 | A | S/P | 
 | 165 |  |  | ratio of Adv phrases count to Adj phrases count |  |  | 1 | A | S/P | 
@@ -231,14 +231,14 @@ In total, we provided 240 Chinese features, X for sentence-level, and X for pass
 | 221 |  |  | Total number of personal pronouns | 1 |  |  | A/B | S/P | 
 | 222 |  |  | Total number of first person pronouns | 1 |  |  | A/B | S/P | 
 | 223 |  |  | Total number of third person pronouns | 1 |  |  | A/B | S/P | 
-| 224 |  | Variation | unique Nouns/total Nouns (Noun Variation-1) |  |  | 1 |  | S/P | 
-| 225 |  |  | (unique Nouns**2)/total Nouns (Squared Noun Variation-1) |  |  | 1 |  | S/P | 
-| 226 |  |  | unique Nouns/sqrt(2*total Nouns) (Corrected Noun Variation-1) |  |  | 1 |  | S/P | 
-| 227 |  |  | unique Verbs/total Verbs (Verb Variation-1) |  |  | 1 |  | S/P | 
-| 228 |  |  | (unique Verbs**2)/total Verbs (Squared Verb Variation-1) |  |  | 1 |  | S/P | 
-| 229 |  |  | unique Verbs/sqrt(2*total Verbs) (Corrected Verb Variation-1) |  |  | 1 |  | S/P | 
-| 230 |  |  | unique Adjectives/total Adjectives (Adjective Variation-1) |  |  | 1 |  | S/P | 
-| 231 |  |  | (unique Adjectives**2)/total Adjectives (Squared Adjective Variation-1) |  |  | 1 |  | S/P | 
+| 224 |  | Variation | unique Nouns/total Nouns (Noun Variation-1) |  |  | 1 | A | S/P | 
+| 225 |  |  | (unique Nouns**2)/total Nouns (Squared Noun Variation-1) |  |  | 1 | A | S/P | 
+| 226 |  |  | unique Nouns/sqrt(2*total Nouns) (Corrected Noun Variation-1) |  |  | 1 | A | S/P | 
+| 227 |  |  | unique Verbs/total Verbs (Verb Variation-1) |  |  | 1 | A | S/P | 
+| 228 |  |  | (unique Verbs**2)/total Verbs (Squared Verb Variation-1) |  |  | 1 | A | S/P | 
+| 229 |  |  | unique Verbs/sqrt(2*total Verbs) (Corrected Verb Variation-1) |  |  | 1 | A | S/P | 
+| 230 |  |  | unique Adjectives/total Adjectives (Adjective Variation-1) |  |  | 1 | A | S/P | 
+| 231 |  |  | (unique Adjectives**2)/total Adjectives (Squared Adjective Variation-1) |  |  | 1 | A | S/P | 
 | 232 |  |  | unique Adjectives/sqrt(2*total Adjectives) (Corrected Adjective Variation-1) |  |  | 1 | A | S/P | 
 | 233 |  |  | unique Adverbs/total Adverbs (AdVerb Variation-1) |  |  | 1 | A | S/P | 
 | 234 |  |  | (unique Adverbs**2)/total Adverbs (Squared AdVerb Variation-1) |  |  | 1 | A | S/P | 
