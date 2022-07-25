@@ -2,7 +2,7 @@
 
 ChiLingFeat is a Python research project for various Chinese handcrafted linguistic features. 
 
-| Index | Category | Sub-category | Descri. | Sung. | Lu. | Lee. | State | Fun | 
+| Index | Category | Sub-category | Description | Sung. | Lu. | Lee. | State | Fun | 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 1 | Shallow features | Character | Percentage of most-common characters per sentence |  | 1 |  |  | S | 
 | 2 |  |  | Percentage of second-most-common characters per sentence |  | 1 |  |  | S | 
