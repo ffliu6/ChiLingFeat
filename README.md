@@ -173,15 +173,15 @@ In total, we provided 240 Chinese features, X for sentence-level, and X for pass
 | 163 |  |  | ratio of Adv phrases count to Subordinate Clauses count |  |  | 1 | A | S/P | 
 | 164 |  |  | ratio of Adv phrases count to Prep phrases count |  |  | 1 | A | S/P | 
 | 165 |  |  | ratio of Adv phrases count to Adj phrases count |  |  | 1 | A | S/P | 
-| 166 |  |  | Average length of noun phrases per sentence |  | 1 |  | A | S/P | 
-| 167 |  |  | Average length of verbal phrases per sentence |  | 1 |  | A | S/P | 
-| 168 |  |  | Average length of prepositional phrases per sentence |  | 1 |  | A | S/P | 
-| 169 |  | Clauses | total Tree height of all sentences |  |  | 1 | B | S/P | 
-| 170 |  |  | average Tree height per sentence |  | 1 | 1 | B | S/P | 
-| 171 |  |  | average Tree height per token (word) |  |  | 1 | B | S/P | 
-| 172 |  |  | total length of flattened Trees |  |  | 1 | B | S/P | 
-| 173 |  |  | average length of flattened Trees per sentence |  |  | 1 |  | S/P | 
-| 174 |  |  | average length of flattened Trees per token (word) |  |  | 1 |  | S/P | 
+| 166 |  |  | Average length of noun phrases per sentence |  | 1 |  |  | S/P | 
+| 167 |  |  | Average length of verbal phrases per sentence |  | 1 |  |  | S/P | 
+| 168 |  |  | Average length of prepositional phrases per sentence |  | 1 |  |  | S/P | 
+| 169 |  | Clauses | total Tree height of all sentences |  |  | 1 | A/B | S/P | 
+| 170 |  |  | average Tree height per sentence |  | 1 | 1 | A/B | S/P | 
+| 171 |  |  | average Tree height per token (word) |  |  | 1 | A/B | S/P | 
+| 172 |  |  | total length of flattened Trees |  |  | 1 | A/B | S/P | 
+| 173 |  |  | average length of flattened Trees per sentence |  |  | 1 | A | S/P | 
+| 174 |  |  | average length of flattened Trees per token (word) |  |  | 1 | A | S/P | 
 | 175 |  |  | Number of punctuation-clauses per sentence |  | 1 |  |  | S/P | 
 | 176 |  |  | Average dependency distance per sentence |  | 1 |  | A/B | S/P | 
 | 177 |  |  | Maximum dependency distance per sentence |  | 1 |  | A/B | S/P | 
@@ -219,9 +219,9 @@ In total, we provided 240 Chinese features, X for sentence-level, and X for pass
 | 209 |  |  | Local Coherence for PA score |  |  | 1 | A | P | 
 | 210 |  |  | Local Coherence for PW score |  |  | 1 | A | P | 
 | 211 |  |  | Local Coherence distance for PU score |  |  | 1 | A | P | 
-| 212 |  | Discourse | Percentage of conjunctions per sentence |  | 1 |  | B | S/P | 
-| 213 |  |  | Number of unique conjunctions per sentence | 1 | 1 |  | B | S/P | 
-| 214 |  |  | Percentage of unique conjunctions per sentence |  | 1 |  | B | S/P | 
+| 212 |  | Discourse | Percentage of conjunctions per sentence |  | 1 |  | A/B | S/P | 
+| 213 |  |  | Number of unique conjunctions per sentence | 1 | 1 |  | A/B | S/P | 
+| 214 |  |  | Percentage of unique conjunctions per sentence |  | 1 |  | A/B | S/P | 
 | 215 |  |  | Percentage of pronouns per sentence |  | 1 |  | A/B | S/P | 
 | 216 |  |  | Number of unique pronouns per sentence | 1 | 1 |  | A/B | S/P | 
 | 217 |  |  | Percentage of unique pronouns per sentence | 1 |  |  | A/B | S/P | 
