@@ -2,7 +2,9 @@
 
 ChiLingFeat is a Python research project for various Chinese handcrafted linguistic features. 
 
-For extracting features, the spacy is firstly utilized to tokenize the input passage/sentence (for sentence, the tokenized list contain one sentence). Then currently, the sentence-level features are parsed by StanfordCoreNLP, the text-level features are obtained the same way as the LingFeat.
+For extracting features, the spacy is firstly utilized to tokenize the input passage/sentence (for sentence, the tokenized list contain one sentence). Then currently, the sentence-level features are parsed by StanfordCoreNLP, the passge-level features are obtained the same way as the LingFeat.
+
+In total, we provided 240 Chinese features, X for sentence-level, and X for passage-level. As shown in the table below, the Fun column represents if the feature is for sentence or passage, in which *S* represents only for *sentence-level*, *P* represents only for *passage-level*, *S/P* represents for both *sentence-level* and *passage-level*. 
 
 | Index | Category | Sub-category | Description | Sung et al. 2015 | Lu et al. 2020 | Lee et al. 2021 | State | Fun | 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
