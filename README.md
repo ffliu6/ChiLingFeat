@@ -38,7 +38,7 @@ Import
 
 this is the only import you need
 """
-from lingfeat import extractor
+import extractor
 
 
 """
@@ -92,7 +92,7 @@ ShaF = LingFeat.ShaF_() # Shallow Features (e.g. avg number of tokens)
 
 # Feature List
 
-In total 231 features would be extracted from four main perspectives, *Shallow features*, *LexicaoSemantic features*, *Syntactic features*, and *Discourse features*. . As shown in the table below, the Fun column represents if the feature is for sentence or passage, in which *S* represents only for *sentence-level*, *P* represents only for *passage-level*, *S/P* represents for both *sentence-level* and *passage-level*. 
+In total 221 features would be extracted from four main perspectives, *Shallow features*, *LexicaoSemantic features*, *Syntactic features*, and *Discourse features*. . As shown in the table below, the Fun column represents if the feature is for sentence or passage, in which *S* represents only for *sentence-level*, *P* represents only for *passage-level*, *S/P* represents for both *sentence-level* and *passage-level*. 
 
 | Index | Category | Sub-category | Description | Sung et al. 2015 | Lu et al. 2020 | Lee et al. 2021 | State | Fun | 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
