@@ -22,6 +22,14 @@ python -m spacy download zh_core_web_trf
 ```bash
 pip install -U supar==1.0.0
 ```
+
+4. StanfordCoreNLP
+```bash
+pip install stanfordcorenlp
+```
+Refer to the website https://github.com/Lynten/stanford-corenlp
+
+
 # How to use
 
 ```python
