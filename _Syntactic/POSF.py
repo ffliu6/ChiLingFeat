@@ -16,8 +16,9 @@ Publication 1: Feng, Lijun, Noémie Elhadad, and Matt Huenerfauth. "Cognitively 
 """
 
 from lingfeat.utils import division
+
     
-def retrieve(NLP_doc, n_token, n_sent):
+def retrieve(NLP_doc, CoreNLP_depends, n_token, n_sent):
     to_NoTag_C = 0
     to_VeTag_C = 0
     to_AjTag_C = 0
@@ -45,6 +46,9 @@ def retrieve(NLP_doc, n_token, n_sent):
     to_UAdverb_C=0
     to_UContent_C=0
     to_UFunction_C=0
+    to_LenNPhrase_C=0
+    to_LenVPhrase_C=0
+    to_LenPrePhrase_C=0
     pronoun_list=[]
     conj_list=[]
     adj_list=[]
@@ -62,13 +66,16 @@ def retrieve(NLP_doc, n_token, n_sent):
         else:
             to_FuncW_C += 1
             functionWord_list.append(token.text)
+            to_LenPrePhrase_C += len(token.text)
 
         if token.pos_ == "NOUN":
             to_NoTag_C += 1
             noun_list.append(token.text)
+            to_LenNPhrase_C += len(token.text)
         if token.pos_ == "VERB":
             to_VeTag_C += 1
             verb_list.append(token.text)
+            to_LenVPhrase_C += len(token.text)
         if token.pos_ == "ADJ":
             to_AjTag_C += 1
             adj_list.append(token.text)
@@ -120,6 +127,13 @@ def retrieve(NLP_doc, n_token, n_sent):
         to_SubjO_C=1
         #print(to_SubjO_C)
     
+    to_DisDepend_C = len(CoreNLP_depends)
+    DisDependList = []
+
+    for depend in CoreNLP_depends:
+        DisDependList.append(abs(depend[-1] - depend[-2]))
+    
+    
     result = {
         "to_NoTag_C":float(to_NoTag_C),
         "as_NoTag_C":float(division(to_NoTag_C,n_sent)),
@@ -129,6 +143,7 @@ def retrieve(NLP_doc, n_token, n_sent):
         "ra_NoAvT_C":float(division(to_NoTag_C,to_AvTag_C)),
         "ra_NoSuT_C":float(division(to_NoTag_C,to_SuTag_C)),
         "ra_NoCoT_C":float(division(to_NoTag_C,to_CoTag_C)),
+
         "to_VeTag_C":float(to_VeTag_C),
         "as_VeTag_C":float(division(to_VeTag_C,n_sent)),
         "at_VeTag_C":float(division(to_VeTag_C,n_token)),
@@ -137,6 +152,7 @@ def retrieve(NLP_doc, n_token, n_sent):
         "ra_VeAvT_C":float(division(to_VeTag_C,to_AvTag_C)),
         "ra_VeSuT_C":float(division(to_VeTag_C,to_SuTag_C)),
         "ra_VeCoT_C":float(division(to_VeTag_C,to_CoTag_C)),
+
         "to_AjTag_C":float(to_AjTag_C),
         "as_AjTag_C":float(division(to_AjTag_C,n_sent)),
         "at_AjTag_C":float(division(to_AjTag_C,n_token)),
@@ -145,6 +161,7 @@ def retrieve(NLP_doc, n_token, n_sent):
         "ra_AjAvT_C":float(division(to_AjTag_C,to_AvTag_C)),
         "ra_AjSuT_C":float(division(to_AjTag_C,to_SuTag_C)),
         "ra_AjCoT_C":float(division(to_AjTag_C,to_CoTag_C)),
+
         "to_AvTag_C":float(to_AvTag_C),
         "as_AvTag_C":float(division(to_AvTag_C,n_sent)),
         "at_AvTag_C":float(division(to_AvTag_C,n_token)),
@@ -153,6 +170,7 @@ def retrieve(NLP_doc, n_token, n_sent):
         "ra_AvVeT_C":float(division(to_AvTag_C,to_VeTag_C)),
         "ra_AvSuT_C":float(division(to_AvTag_C,to_SuTag_C)),
         "ra_AvCoT_C":float(division(to_AvTag_C,to_CoTag_C)),
+
         "to_SuTag_C":float(to_SuTag_C),
         "as_SuTag_C":float(division(to_SuTag_C,n_sent)),
         "at_SuTag_C":float(division(to_SuTag_C,n_token)),
@@ -161,6 +179,7 @@ def retrieve(NLP_doc, n_token, n_sent):
         "ra_SuVeT_C":float(division(to_SuTag_C,to_VeTag_C)),
         "ra_SuAvT_C":float(division(to_SuTag_C,to_AvTag_C)),
         "ra_SuCoT_C":float(division(to_SuTag_C,to_CoTag_C)),
+
         "to_CoTag_C":float(to_CoTag_C),
         "as_CoTag_C":float(division(to_CoTag_C,n_sent)),
         "at_CoTag_C":float(division(to_CoTag_C,n_token)),
@@ -169,6 +188,7 @@ def retrieve(NLP_doc, n_token, n_sent):
         "ra_CoVeT_C":float(division(to_CoTag_C,to_VeTag_C)),
         "ra_CoAvT_C":float(division(to_CoTag_C,to_AvTag_C)),
         "ra_CoSuT_C":float(division(to_CoTag_C,to_SuTag_C)),
+
         "to_ContW_C":float(to_ContW_C),
         "as_ContW_C":float(division(to_ContW_C,n_sent)),
         "at_ContW_C":float(division(to_ContW_C,n_token)),
@@ -176,47 +196,64 @@ def retrieve(NLP_doc, n_token, n_sent):
         "as_FuncW_C":float(division(to_FuncW_C,n_sent)),
         "at_FuncW_C":float(division(to_FuncW_C,n_token)),
         "ra_CoFuW_C":float(division(to_ContW_C,to_FuncW_C)), 
-        "as_FuncW_C":float(division(to_Subj_C,n_sent)),
-        "at_FuncW_C":float(division(to_Subj_C,n_token)),
-        "as_Subj_C":float(division(to_Subj_C,n_sent)),
-        "at_Subj_C":float(division(to_Subj_C,n_token)),
-        "as_Obj_C":float(division(to_Obj_C,n_sent)),
-        "at_Obj_C":float(division(to_Obj_C,n_token)),
-        "as_SubjO_C":float(division(to_SubjO_C,n_sent)),
-        "at_SubjO_C":float(division(to_SubjO_C,n_token)),
-        "to_Pronoun_C":float(to_Pronoun_C),
-        "as_Pronoun_C":float(division(to_Pronoun_C,n_sent)),
-        "at_Pronoun_C":float(division(to_Pronoun_C,n_token)),
-        "to_UPronoun_C":float(to_UPronoun_C),
+
+        "Per_Conj_C": float(division(division(len(conj_list), n_token), n_sent)),
+        "as_UConj_C":float(division(to_UConj_C,n_sent)),
+        "at_UConj_C":float(division(to_UConj_C,n_token)),
+        "Per_UConj_C": float(division(division(to_UConj_C, n_token), n_sent)),
+        # "to_UAdj_C":float(to_UAdj_C),
+        
+        "as_UAdj_C":float(division(to_UAdj_C,n_sent)),
+        "at_UAdj_C":float(division(to_UAdj_C,n_token)),
+        # "to_UVerb_C":float(to_UVerb_C),
+        "as_UVerb_C":float(division(to_UVerb_C,n_sent)),
+        "at_UVerb_C":float(division(to_UVerb_C,n_token)),
+        # "to_UAdverb_C":float(to_UAdverb_C),
+        "as_UAdverb_C":float(division(to_UAdverb_C,n_sent)),
+        "at_UAdverb_C":float(division(to_UAdverb_C,n_token)),
+        # "to_UNoun_C":float(to_UNoun_C),
+        "as_UNoun_C":float(division(to_UNoun_C,n_sent)),
+        "at_UNoun_C":float(division(to_UNoun_C,n_token)),
+        # "to_UFunction_C":float(to_UFunction_C),
+        "as_UFunction_C":float(division(to_UFunction_C,n_sent)),
+        "at_UFunction_C":float(division(to_UFunction_C,n_token)),
+        # "to_UContent_C":float(to_UContent_C),
+        "as_UContent_C":float(division(to_UContent_C,n_sent)),
+        "at_UContent_C":float(division(to_UContent_C,n_token)),
+
+        # "as_FuncW_C":float(division(to_Subj_C,n_sent)),
+        # "at_FuncW_C":float(division(to_Subj_C,n_token)),
+        # "as_Subj_C":float(division(to_Subj_C,n_sent)),
+        # "at_Subj_C":float(division(to_Subj_C,n_token)),
+        # "as_Obj_C":float(division(to_Obj_C,n_sent)),
+        # "at_Obj_C":float(division(to_Obj_C,n_token)),
+        # "as_SubjO_C":float(division(to_SubjO_C,n_sent)),
+        # "at_SubjO_C":float(division(to_SubjO_C,n_token)),
+        # "to_Pronoun_C":float(to_Pronoun_C),
+        # "as_Pronoun_C":float(division(to_Pronoun_C,n_sent)),
+        # "at_Pronoun_C":float(division(to_Pronoun_C,n_token)),
+        # "to_UPronoun_C":float(to_UPronoun_C),
+        "Per_Pronoun_C": float(division(division(len(pronoun_list), n_token), n_sent)),
         "as_UPronoun_C":float(division(to_UPronoun_C,n_sent)),
-        "at_UPronoun_C":float(division(to_UPronoun_C,n_token)),
+        "Per_UPronoun_C": float(division(division(to_UPronoun_C, n_token), n_sent)),
+        # "at_UPronoun_C":float(division(to_UPronoun_C,n_token)),
         #above is the AACL submission feature list
         "to_Personal_C":float(to_Personal_C),
         "to_FirstPersonal_C":float(to_FirstPersonal_C),
         "to_ThirdPersonal_C":float(to_ThirdPersonal_C),
-        "to_Conj_C":float(to_Conj_C),
+        # "to_Conj_C":float(to_Conj_C),
         "as_Conj_C":float(division(to_Conj_C,n_sent)),
-        "at_Conj_C":float(division(to_Conj_C,n_token)),
-        "to_UConj_C":float(to_UConj_C),
-        "as_UConj_C":float(division(to_UConj_C,n_sent)),
-        "at_UConj_C":float(division(to_UConj_C,n_token)),
-        "to_UAdj_C":float(to_UAdj_C),
-        "as_UAdj_C":float(division(to_UAdj_C,n_sent)),
-        "at_UAdj_C":float(division(to_UAdj_C,n_token)),
-        "to_UVerb_C":float(to_UVerb_C),
-        "as_UVerb_C":float(division(to_UVerb_C,n_sent)),
-        "at_UVerb_C":float(division(to_UVerb_C,n_token)),
-        "to_UAdverb_C":float(to_UAdverb_C),
-        "as_UAdverb_C":float(division(to_UAdverb_C,n_sent)),
-        "at_UAdverb_C":float(division(to_UAdverb_C,n_token)),
-        "to_UNoun_C":float(to_UNoun_C),
-        "as_UNoun_C":float(division(to_UNoun_C,n_sent)),
-        "at_UNoun_C":float(division(to_UNoun_C,n_token)),
-        "to_UFunction_C":float(to_UFunction_C),
-        "as_UFunction_C":float(division(to_UFunction_C,n_sent)),
-        "at_UFunction_C":float(division(to_UFunction_C,n_token)),
-        "to_UContent_C":float(to_UContent_C),
-        "as_UContent_C":float(division(to_UContent_C,n_sent)),
-        "at_UContent_C":float(division(to_UContent_C,n_token)),
+        # "at_Conj_C":float(division(to_Conj_C,n_token)),
+        # "to_UConj_C":float(to_UConj_C),
+        
+
+        "as_LenNPhrase_C": float(division(to_LenNPhrase_C, n_sent)),
+        "as_LenVPhrase_C": float(division(to_LenVPhrase_C, n_sent)),
+        "as_LenPrePhrase_C": float(division(to_LenPrePhrase_C, n_sent)),
+
+        "as_DisDepend": float(division(sum(DisDependList), n_sent)),
+        "max_DisDepend": float(division(max(DisDependList), n_sent)),
+        "to_DisDepend_C": float(to_DisDepend_C),
+        "as_DisDepend_C": float(division(to_DisDepend_C, n_sent)),
     }
     return result
