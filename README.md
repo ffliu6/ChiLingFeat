@@ -312,3 +312,12 @@ In total 221 features would be extracted from four main perspectives, *Shallow f
 | 219 |    |    |  log(unique tokens)/log(total tokens) (Bi-Logarithmic TTR)  |    |    |  1  |  A/B  |  S/P  |  | 
 | 220 |    |    |  (log(unique tokens))^2/log(total tokens/unique tokens) (Uber Index)  |    |    |  1  |  A/B  |  S/P  |  | 
 | 221 |    |    |  Measure of Textual Lexical Diversity (default TTR = 0.72)  |    |    |  1  |  A/B  |  S/P  |  | 
+
+## References
+Pushing on Text Readability Assessment: A Transformer Meets Handcrafted Linguistic Features<br>
+https://aclanthology.org/2021.emnlp-main.834v2.pdf
+
+Tools:<br>
+https://github.com/brucewlee/lingfeat<br>
+
+Most of our code are modifed from the above tools<br>
